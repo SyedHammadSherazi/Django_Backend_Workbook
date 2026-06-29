@@ -1,0 +1,5 @@
+
+
+When a user enters a URL in the browser, the request is sent to the Django application. Django checks the URL in urls.py and finds the matching view. The view processes the request, and returns a response. Finally, the response is sent back to the user's browser.
+
+Browser → URL → urls.py → View → Response → Browser

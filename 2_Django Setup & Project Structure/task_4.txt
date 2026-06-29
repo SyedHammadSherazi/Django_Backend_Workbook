@@ -1,0 +1,1 @@
+# Add a simple view that returns 'Hello Backend' and wire it to a URL.
