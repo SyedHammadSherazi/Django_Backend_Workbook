@@ -1,0 +1,42 @@
+Http= it means HyperText Transfer  Protocol
+it allows the web browser and web servers to communicate eachother.
+for example i type a website address into the browser. Browser sends an HTTP request to the web server.The server processes the request and sends back an HTTP response
+including the images videos content 
+                What is GET?
+GET is used to retrieve information from the server.
+It only reads data and does not modify anything.
+
+                    What happens?
+The browser or application sends a GET request.
+The server receives it.
+The server searches for user ID 1.
+The server sends the user data back.
+
+                                        // Post Method
+What is POST?
+POST creates a new resource.
+It sends data from the client to the server.
+Suppose a website has no user named Sara.
+The client sends:
+POST /users
+Body
+{
+    "name":"Sara",
+    "age":19
+}
+   //Put Method
+                        What is PUT?
+
+PUT updates an existing resource.
+
+Usually it replaces the entire resource with the new data.
+
+                    Delete Method
+it removes the resourses from the database parmanently 
+
+
+
+            Patch Method
+PATCH updates only the specified fields of an existing resource.
+
+

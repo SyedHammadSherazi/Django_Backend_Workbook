@@ -1,0 +1,6 @@
+# Explain the difference between a path parameter and a query parameter with an
+# example URL
+ Path Parameter                                      Query Parameter          
+
+Identify a specific resource.Inside URL path               Filter or modify results 
+Example   /houses/5                                         ?color=blue                         

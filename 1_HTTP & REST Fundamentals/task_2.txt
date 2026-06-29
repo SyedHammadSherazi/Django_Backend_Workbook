@@ -1,0 +1,10 @@
+common HTTP status codes and their meanings:
+Status Code          Meaning                                                                                          
+
+200 OK                    Request was successful.            
+201 Created                New resource created successfully. 
+400 Bad Request            Invalid request from the client.   
+401 Unauthorized          Authentication required or failed. 
+403 Forbidden            Access denied.            
+ 404 Not Found             Resource not found.               
+500 Internal Server Error  Server error.                                            

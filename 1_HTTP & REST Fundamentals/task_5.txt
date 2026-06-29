@@ -1,0 +1,6 @@
+# Write down what 'stateless' means for an API and why it matters
+A stateless API means that the server does not store any information about previous client requests.
+                Matters
+        Improves scalability, since any server can handle any request
+     Increases reliability, because there is no dependency on stored session data
+      
