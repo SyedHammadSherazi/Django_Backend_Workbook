@@ -1,0 +1,9 @@
+#Create a virtual environment, install Django, and start a new project. 
+Create virtual environment
+python -m venv venv
+Step 2: Activate it
+venv\Scripts\activate
+Step 3: Install Django
+pip install django
+Step 4: Start new project
+django-admin startproject myproject

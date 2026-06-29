@@ -1,0 +1,5 @@
+ #Run the development server and open the default page in the browser. 
+
+
+Run Development Server
+python manage.py runserver
