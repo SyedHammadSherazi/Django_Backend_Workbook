@@ -9,7 +9,7 @@ It only reads data and does not modify anything.
                     What happens?
 The browser or application sends a GET request.
 The server receives it.
-The server searches for user ID 1.
+
 The server sends the user data back.
 
                                         // Post Method
