@@ -7,7 +7,9 @@ from .models import Task
 from .serializers import ProjectSerializer
 from .serializers import TaskSerializer
 from rest_framework.viewsets import ModelViewSet
-
+from rest_framework.decorators import action
+from rest_framework import status
+from rest_framework.permissions import IsAuthenticated
 def home(request):
  return HttpResponse("Hello Backend")
 # class ProjectDetailAPIView(APIView):
@@ -35,8 +37,26 @@ class ProjectViewSet(ModelViewSet):
     queryset = Project.objects.all()
 
     serializer_class = ProjectSerializer
+    permission_classes = [IsAuthenticated]
    
 class TaskViewSet(ModelViewSet):
-   queryset = Task.objects.all()
-   serializer_class = TaskSerializer
+    queryset = Task.objects.all()
+    serializer_class = TaskSerializer
+
+    @action(detail=True, methods=["patch"])
+    def change_status(self, request, pk=None):
+
+        task = self.get_object()
+
+        task.status = request.data.get("status")
+
+        task.save()
+
+        return Response(
+            {
+                "message": "Task status updated successfully.",
+                "status": task.status
+            },
+            status=status.HTTP_200_OK
+        )
    

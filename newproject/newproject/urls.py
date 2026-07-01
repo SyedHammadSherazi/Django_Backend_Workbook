@@ -17,21 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from newapp import views
-# from newapp.views import ProjectListAPIView
-# from newapp.views import ProjectDetailAPIView
-from newapp.views import ProjectViewSet
 from rest_framework.routers import DefaultRouter
-from newapp.views import TaskViewSet
-router = DefaultRouter()
+from newapp.views import ProjectViewSet, TaskViewSet
 
-# ViewSet register karo
+router = DefaultRouter()
 router.register("projects", ProjectViewSet, basename="projects")
-router.register("tasks",TaskViewSet,basename="tasks")
+router.register("tasks", TaskViewSet, basename="tasks")
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('',views.home),
-    # path("projects/",ProjectDetailAPIView.as_view(),
-    #      name="projects"),
-    # path("projects/<int:id>/", ProjectListAPIView.as_view(), name="project-detail")
-     path("", include(router.urls)),
+    path("admin/", admin.site.urls),
+    path("", views.home),
+    path("", include("Accounts.urls")),
+    path("", include(router.urls)),
 ]
