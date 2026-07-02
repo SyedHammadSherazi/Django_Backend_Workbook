@@ -1,9 +1,8 @@
 from django.urls import path
 from .views import SignupView, UserListView
-from rest_framework_simplejwt.views import (
-    TokenObtainPairView,
-    TokenRefreshView,
-)
+from rest_framework_simplejwt.views import TokenObtainPairView,TokenRefreshView
+from .views import UserDeleteView
+
 
 urlpatterns = [
     path("signup/", SignupView.as_view(), name="signup"),
@@ -14,4 +13,9 @@ urlpatterns = [
         UserListView.as_view(),
         name="users"
     ),
+   path(
+    "users/<int:pk>/",
+    UserDeleteView.as_view(),
+    name="user-delete",
+),
 ]
